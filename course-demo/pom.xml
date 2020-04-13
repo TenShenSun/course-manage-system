@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.sun.course</groupId>
+        <artifactId>course-demo-root</artifactId>
+        <version>${course-demo-root-version}</version>
+    </parent>
+    <groupId>com.sun.course</groupId>
+    <artifactId>course-demo</artifactId>
+
+    <dependencies>
+        <!--controller模块的依赖-->
+        <dependency>
+            <groupId>com.sun.course</groupId>
+            <artifactId>course-demo-controller</artifactId>
+            <version>${course-demo-root-version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!--使用springboot的maven插件-->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--设置主类-->
+                    <mainClass>com.sun.course.coursedemo.CourseDemoApp</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
